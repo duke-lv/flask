@@ -1,6 +1,8 @@
 import datetime
 class Config(object):
     pass
+class TestConfig(Config):
+    pass
 class ProdConfig(Config):
     pass
 class DevConfig(Config):
@@ -16,7 +18,7 @@ class DevConfig(Config):
         'JWT_AUTH_URL_RULE': '/api/auth',
         'JWT_EXPIRATION_DELTA': datetime.timedelta(days=1)
     }
-    FLASK_ENV = 'dev'
+    FLASK_ENV = 'development'
     host = 'localhost'
     debug = True
     port = 8080
